@@ -24,10 +24,10 @@ export default {
       initItem: [
         {
           id: 1,
-          name: "nguyen tuan",
-          email: "dongsang@gmail.com",
-          birthDay: "1993-01-03",
-          gender: "Nam",
+          name: "giay da",
+          qty: 16,
+          date: "2022-01-03",
+          price: 120000,
           code: "1",
           userName: "tuancandongsang",
           passWord: "03011993",
@@ -35,10 +35,10 @@ export default {
         },
         {
           id: 2,
-          name: "bui hoa",
-          email: "hoaham@gmail.com",
-          birthDay: "1994-10-05",
-          gender: "Nu",
+          name: "ao somi",
+          qty: 16,
+          date: "2021-10-05",
+          price: 160000,
           code: "2",
           userName: "thanhhoa",
           passWord: "05101994",
@@ -46,10 +46,10 @@ export default {
         },
         {
           id: 3,
-          name: " nguyen nga",
-          email: "ngaden@gmail.com",
-          birthDay: "2001-12-26",
-          gender: "Nu",
+          name: "vest",
+          qty: 16,
+          date: "2020-12-26",
+          price: 180000,
           code: "3",
           userName: "phuongnga",
           passWord: "28122001",
@@ -61,10 +61,9 @@ export default {
       addItem: {
         id: "",
         name: "",
-        email: "",
-        birthDay: "",
-        gender: "",
-        code: "",
+        qty: "",
+        date: "",
+        price: "",
       },
     };
   },
@@ -91,9 +90,9 @@ export default {
         this.addItem = {
           id: "",
           name: "",
-          email: "",
-          birthDay: "",
-          gender: "",
+          qty: "",
+          date: "",
+          price: "",
           code: "",
         };
       }

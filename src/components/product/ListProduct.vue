@@ -44,9 +44,9 @@
             <th>{{ index + 1 }}</th>
             <th>{{ item.id }}</th>
             <td>{{ item.name }}</td>
-            <td>{{ item.email }}</td>
-            <td>{{ item.birthDay.split("-").reverse().join("/") }}</td>
-            <td>{{ item.gender }}</td>
+            <td>{{ item.qty }}</td>
+            <td>{{ item.date.split("-").reverse().join("/") }}</td>
+            <td>{{ item.price }}</td>
             <td>
               <button
                 type="button"

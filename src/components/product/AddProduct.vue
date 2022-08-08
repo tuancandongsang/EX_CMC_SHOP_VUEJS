@@ -26,7 +26,7 @@
               aria-label="Username"
               aria-describedby="basic-addon1"
               v-bind:value="inforItem.name"
-              v-on:input="handleInput"
+              v-on:input="handleInputName"
             />
           </div>
           <!-- <span
@@ -46,7 +46,8 @@
               placeholder="Username"
               aria-label="Username"
               aria-describedby="basic-addon1"
-              v-model="inforItem.email"
+              v-bind:value="inforItem.qty"
+              v-on:input="handleInputQty"
             />
           </div>
           <!-- <span
@@ -65,12 +66,13 @@
                 placeholder="Username"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
-                v-model="inforItem.birthDay"
+              v-bind:value="inforItem.date"
+              v-on:input="handleInputDate"
               />
             </div>
             <!-- <span
                                             style={{ color: 'red' }}
-                                        >{errorBirthDay}</span> -->
+                                        >{errordate}</span> -->
           </div>
           <div class="label_title_2">
             <label htmlFor="basic-url" class="htmlForm-label"
@@ -83,12 +85,13 @@
                 placeholder="Username"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
-                v-model="inforItem.gender"
+              v-bind:value="inforItem.price"
+              v-on:input="handleInputPrice"
               />
             </div>
             <!-- <span
                                             style={{ color: 'red' }}
-                                        >{errorBirthDay}</span> -->
+                                        >{errordate}</span> -->
           </div>
         </div>
         <div class="label_title">
@@ -104,7 +107,8 @@
               placeholder="Username"
               aria-label="Username"
               aria-describedby="basic-addon1"
-              v-model="inforItem.code"
+              v-bind:value="inforItem.id"
+              v-on:input="handleInputId"
             />
           </div>
         </div>
@@ -175,10 +179,21 @@ export default {
       this.$emit("handleInputx", data)
       this.$emit('closeModal')
     },
-    handleInput(e){
+    handleInputName(e){
       this.inforItem.name = e.target.value
-      // this.$emit('handleInputx', e.target.value)
-    }
+    },
+    handleInputPrice(e){
+      this.inforItem.price = e.target.value
+    },
+    handleInputQty(e){
+      this.inforItem.qty = e.target.value
+    },
+    handleInputDate(e){
+      this.inforItem.date = e.target.value
+    },
+    handleInputId(e){
+      this.inforItem.id = e.target.value
+    },
   },
   data() {
     return {
@@ -187,8 +202,8 @@ export default {
       //   id: '',
       //   name: "",
       //   email: "",
-      //   birthDay: "",
-      //   gender: "",
+      //   date: "",
+      //   price: "",
       //   code: "",
       // }
     };
@@ -255,16 +270,16 @@ export default {
   margin: auto;
 }
 
-.gender__block {
+.price__block {
   display: flex;
 }
 
-.select_gender {
+.select_price {
   width: 65px;
   padding: 0;
 }
 
-.select_gender__block {
+.select_price__block {
   margin-left: 5px;
 }
 
